@@ -84,6 +84,30 @@ const photographyProjects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
     images: ["/photography-project-image-7.jpg", "/photography-project-image-8.jpg", "/photography-project-image-9.jpg"],
   },
+  {
+    id: 4,
+    title: "Photography Project Name",
+    date: "15 February, 2025",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+    images: ["/photography-project-image-7.jpg", "/photography-project-image-8.jpg", "/photography-project-image-9.jpg"],
+  },
+  {
+    id: 5,
+    title: "Photography Project Name",
+    date: "15 February, 2025",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+    images: ["/photography-project-image-7.jpg", "/photography-project-image-8.jpg", "/photography-project-image-9.jpg"],
+  },
+  {
+    id: 6,
+    title: "Photography Project Name",
+    date: "15 February, 2025",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+    images: ["/photography-project-image-7.jpg", "/photography-project-image-8.jpg", "/photography-project-image-9.jpg"],
+  },
 ]
 
 export default function Projects() {

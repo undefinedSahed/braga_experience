@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 export default function ContactForm() {
   const { toast } = useToast()
@@ -62,37 +63,38 @@ export default function ContactForm() {
   return (
     <section id="contact" className="py-20 bg-neutral-950">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-5">
           {/* Left side - Info with background */}
           <div
-            className="relative rounded-2xl overflow-hidden p-8 md:p-12 flex flex-col justify-center"
+            className="relative rounded-l-2xl overflow-hidden px-4 md:py-32 py-10 md:px-8 flex flex-col justify-center col-span-2"
             style={{
-              backgroundImage: `url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%204-Sb5rHuQWDLVqCuyRniBmIawiQUdGCl.png)`,
+              backgroundImage: `url(/contact-left.png)`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our London Videography Services Deliver Creative and Engaging Content Tailored to Your Business
+              <h2 className="text-xl md:text-3xl font-medium md:pr-6 text-white mb-6">
+                Our London Videography Services Deliver
+                Creative and Engaging Content
+                Tailored to You and Your Business.
               </h2>
               <p className="text-neutral-300 mb-6 leading-relaxed">
-                Elevate your brand with professional media campaigns. We specialize in corporate video production, brand
-                storytelling, product and event coverage, and team is equipped to bring your vision to life.
+                From impactful commercials to dynamic social media campaigns, we specialize in crafting high-quality visuals that resonate with your audience. Whether you're based in London, elsewhere in the UK, or across Europe, our team is equipped to bring your vision to life.
               </p>
               <p className="text-neutral-300 mb-6 leading-relaxed">
-                Based in London, we offer our services throughout the UK and across Europe, and team is equipped to
-                bring your vision to life.
+                Supporting Statistics: <br />
+                Did you know? 84% of video marketers say video has helped increase sales. 83% of consumers were convinced to buy a product or service by watching a brand&apos;s video. Users typically spend 88% more time on websites that feature video content.
               </p>
               <div className="space-y-3 text-white">
+                <a href="mailto:contact@bragaexperience.com" className="flex items-center gap-2">
+                  <span className="font-semibold"><Mail size={18} /></span> contact@bragaexperience.com
+                </a>
+                <a href="tel:+447123456789" className="flex items-center gap-2">
+                  <span className="font-semibold"><Phone size={18} /></span> +44 7123 456789
+                </a>
                 <p className="flex items-center gap-2">
-                  <span className="font-semibold">📧</span> contact@bragaexperience.com
-                </p>
-                <p className="flex items-center gap-2">
-                  <span className="font-semibold">📱</span> +44 7123 456789
-                </p>
-                <p className="flex items-center gap-2">
-                  <span className="font-semibold">📍</span> London, UK & Europe
+                  <span className="font-semibold"> <MapPin size={18} /></span> London, UK & Europe
                 </p>
               </div>
             </div>
@@ -100,9 +102,9 @@ export default function ContactForm() {
 
           {/* Right side - Form with background */}
           <div
-            className="relative rounded-2xl overflow-hidden p-8 md:p-12"
+            className="relative rounded-r-2xl overflow-hidden px-4 md:py-32 py-10 md:px-8 col-span-3"
             style={{
-              backgroundImage: `url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Group%205-l4JnL9iPjiqKeySL8HBAQ16rQOX5Fl.png)`,
+              backgroundImage: `url(/contact-right.png)`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
