@@ -90,57 +90,59 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState<Tab>("filmmaking")
 
   return (
-    <section id="projects" className="py-20 bg-neutral-950">
+    <section id="projects" className="lg:py-28 bg-[#1F1F1F]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Projects</h2>
-          <p className="text-neutral-400 text-lg">Elevating your journey through design, film, and storytelling.</p>
-        </div>
+        <div className="flex justify-between items-center">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Projects</h2>
+            <p className="text-neutral-400 text-lg">Elevating your journey through design, film, and storytelling.</p>
+          </div>
 
-        {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-12">
-          <button
-            onClick={() => setActiveTab("filmmaking")}
-            className={`px-8 py-3 rounded-full text-lg font-medium transition-all ${
-              activeTab === "filmmaking"
-                ? "bg-white text-neutral-950"
-                : "bg-neutral-800 text-white hover:bg-neutral-700"
-            }`}
-          >
-            Filmmaking
-          </button>
-          <button
-            onClick={() => setActiveTab("photography")}
-            className={`px-8 py-3 rounded-full text-lg font-medium transition-all ${
-              activeTab === "photography"
-                ? "bg-white text-neutral-950"
-                : "bg-neutral-800 text-white hover:bg-neutral-700"
-            }`}
-          >
-            Photography
-          </button>
+          {/* Tabs */}
+          <div className="flex justify-center mb-12">
+            <button
+              onClick={() => setActiveTab("filmmaking")}
+              className={`px-4 text-lg font-medium transition-all cursor-pointer ${activeTab === "filmmaking"
+                ? "text-white relative after:absolute after:w-4/5 after:h-[1px] after:bg-white after:content-[''] after:bottom-0 after:left-1/2 after:-translate-x-1/2"
+                : "text-white/60"
+                }`}
+            >
+              Filmmaking
+            </button>
+            <button
+              onClick={() => setActiveTab("photography")}
+              className={`px-4 text-lg font-medium transition-all cursor-pointer ${activeTab === "photography"
+                ? "text-white relative after:absolute after:w-4/5 after:h-[1px] after:bg-white after:content-[''] after:bottom-0 after:left-1/2 after:-translate-x-1/2"
+                : "text-white/60"
+                }`}
+            >
+              Photography
+            </button>
+          </div>
         </div>
 
         {/* Filmmaking Projects */}
         {activeTab === "filmmaking" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filmmakingProjects.map((project) => (
-              <Card key={project.id} className="bg-neutral-900 border-neutral-800 overflow-hidden">
+              <Card key={project.id} className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0">
                 <div className="relative aspect-video">
                   <video
                     src={project.videoUrl}
                     controls
-                    className="w-full h-full object-cover"
+                    className="w-full aspect-video object-cover"
                     poster={project.videoUrl}
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <div className="flex items-center gap-2 text-neutral-400 text-sm mb-3">
-                    <Calendar className="w-4 h-4" />
-                    <span>{project.date}</span>
+                <CardContent className="p-6 py-0">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <div className="flex items-center gap-2 text-neutral-400 text-sm mb-3">
+                      <Calendar className="w-4 h-4" />
+                      <span>{project.date}</span>
+                    </div>
                   </div>
-                  <p className="text-neutral-400 text-sm leading-relaxed">{project.description}</p>
+                  <p className="text-neutral-400 text-base leading-relaxed">{project.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -151,7 +153,7 @@ export default function Projects() {
         {activeTab === "photography" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {photographyProjects.map((project) => (
-              <Card key={project.id} className="bg-neutral-900 border-neutral-800 overflow-hidden">
+              <Card key={project.id} className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0">
                 <Carousel className="w-full">
                   <CarouselContent>
                     {project.images.map((image, index) => (
@@ -170,13 +172,15 @@ export default function Projects() {
                   <CarouselPrevious className="left-2" />
                   <CarouselNext className="right-2" />
                 </Carousel>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <div className="flex items-center gap-2 text-neutral-400 text-sm mb-3">
-                    <Calendar className="w-4 h-4" />
-                    <span>{project.date}</span>
+                <CardContent className="p-6 py-0">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <div className="flex items-center gap-2 text-neutral-400 text-sm mb-3">
+                      <Calendar className="w-4 h-4" />
+                      <span>{project.date}</span>
+                    </div>
                   </div>
-                  <p className="text-neutral-400 text-sm leading-relaxed">{project.description}</p>
+                  <p className="text-neutral-400 text-base leading-relaxed">{project.description}</p>
                 </CardContent>
               </Card>
             ))}
