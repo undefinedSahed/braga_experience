@@ -22,7 +22,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-5xl md:text-8xl font-bold text-white mb-8 text-balance">Braga Experience</h1>
+        <h1 className="text-5xl md:text-8xl font-bold text-white mb-8 text-balance font-acme">Braga Experience</h1>
         <p className="text-lg md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto text-pretty">
           We craft cinematic stories that connect brands and people. <br />
           From corporate films to creative content — we make visuals that move audiences.

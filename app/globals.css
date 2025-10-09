@@ -1,7 +1,14 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+.font-acme {
+  font-family: var(--font-acme);
+}
+[data-placeholder] {
+  color: #f8f9fa;
+}
 
 :root {
   --background: oklch(1 0 0);

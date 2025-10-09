@@ -1,12 +1,18 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Calendar } from "lucide-react"
-import Image from "next/image"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Calendar } from "lucide-react";
+import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-type Tab = "filmmaking" | "photography"
+type Tab = "filmmaking" | "photography";
 
 const filmmakingProjects = [
   {
@@ -57,7 +63,7 @@ const filmmakingProjects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
     videoUrl: "/filmmaking-project-video-thumbnail.jpg",
   },
-]
+];
 
 const photographyProjects = [
   {
@@ -66,7 +72,11 @@ const photographyProjects = [
     date: "15 February, 2025",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
-    images: ["/photography-project-image-1.jpg", "/photography-project-image-2.jpg", "/photography-project-image-3.jpg"],
+    images: [
+      "/photography-project-image-1.jpg",
+      "/photography-project-image-2.jpg",
+      "/photography-project-image-3.jpg",
+    ],
   },
   {
     id: 2,
@@ -74,7 +84,11 @@ const photographyProjects = [
     date: "15 February, 2025",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
-    images: ["/photography-project-image-4.jpg", "/photography-project-image-5.jpg", "/photography-project-image-6.jpg"],
+    images: [
+      "/photography-project-image-4.jpg",
+      "/photography-project-image-5.jpg",
+      "/photography-project-image-6.jpg",
+    ],
   },
   {
     id: 3,
@@ -82,7 +96,11 @@ const photographyProjects = [
     date: "15 February, 2025",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
-    images: ["/photography-project-image-7.jpg", "/photography-project-image-8.jpg", "/photography-project-image-9.jpg"],
+    images: [
+      "/photography-project-image-7.jpg",
+      "/photography-project-image-8.jpg",
+      "/photography-project-image-9.jpg",
+    ],
   },
   {
     id: 4,
@@ -90,7 +108,11 @@ const photographyProjects = [
     date: "15 February, 2025",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
-    images: ["/photography-project-image-7.jpg", "/photography-project-image-8.jpg", "/photography-project-image-9.jpg"],
+    images: [
+      "/photography-project-image-7.jpg",
+      "/photography-project-image-8.jpg",
+      "/photography-project-image-9.jpg",
+    ],
   },
   {
     id: 5,
@@ -98,7 +120,11 @@ const photographyProjects = [
     date: "15 February, 2025",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
-    images: ["/photography-project-image-7.jpg", "/photography-project-image-8.jpg", "/photography-project-image-9.jpg"],
+    images: [
+      "/photography-project-image-7.jpg",
+      "/photography-project-image-8.jpg",
+      "/photography-project-image-9.jpg",
+    ],
   },
   {
     id: 6,
@@ -106,39 +132,49 @@ const photographyProjects = [
     date: "15 February, 2025",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
-    images: ["/photography-project-image-7.jpg", "/photography-project-image-8.jpg", "/photography-project-image-9.jpg"],
+    images: [
+      "/photography-project-image-7.jpg",
+      "/photography-project-image-8.jpg",
+      "/photography-project-image-9.jpg",
+    ],
   },
-]
+];
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState<Tab>("filmmaking")
+  const [activeTab, setActiveTab] = useState<Tab>("filmmaking");
 
   return (
     <section id="projects" className="lg:py-28 bg-[#1F1F1F]">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Projects</h2>
-            <p className="text-neutral-400 text-lg">Elevating your journey through design, film, and storytelling.</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-acme">
+              Projects
+            </h2>
+            <p className="text-neutral-400 text-lg">
+              Elevating your journey through design, film, and storytelling.
+            </p>
           </div>
 
           {/* Tabs */}
           <div className="flex justify-center mb-12">
             <button
               onClick={() => setActiveTab("filmmaking")}
-              className={`px-4 text-lg font-medium transition-all cursor-pointer ${activeTab === "filmmaking"
-                ? "text-white relative after:absolute after:w-4/5 after:h-[1px] after:bg-white after:content-[''] after:bottom-0 after:left-1/2 after:-translate-x-1/2"
-                : "text-white/60"
-                }`}
+              className={`px-4 text-lg font-medium transition-all cursor-pointer ${
+                activeTab === "filmmaking"
+                  ? "text-white relative after:absolute after:w-4/5 after:h-[1px] after:bg-white after:content-[''] after:bottom-0 after:left-1/2 after:-translate-x-1/2"
+                  : "text-white/60"
+              }`}
             >
               Filmmaking
             </button>
             <button
               onClick={() => setActiveTab("photography")}
-              className={`px-4 text-lg font-medium transition-all cursor-pointer ${activeTab === "photography"
-                ? "text-white relative after:absolute after:w-4/5 after:h-[1px] after:bg-white after:content-[''] after:bottom-0 after:left-1/2 after:-translate-x-1/2"
-                : "text-white/60"
-                }`}
+              className={`px-4 text-lg font-medium transition-all cursor-pointer ${
+                activeTab === "photography"
+                  ? "text-white relative after:absolute after:w-4/5 after:h-[1px] after:bg-white after:content-[''] after:bottom-0 after:left-1/2 after:-translate-x-1/2"
+                  : "text-white/60"
+              }`}
             >
               Photography
             </button>
@@ -149,7 +185,10 @@ export default function Projects() {
         {activeTab === "filmmaking" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filmmakingProjects.map((project) => (
-              <Card key={project.id} className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0">
+              <Card
+                key={project.id}
+                className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0"
+              >
                 <div className="relative aspect-video">
                   <video
                     src={project.videoUrl}
@@ -160,13 +199,17 @@ export default function Projects() {
                 </div>
                 <CardContent className="p-6 py-0">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2 font-acme">
+                      {project.title}
+                    </h3>
                     <div className="flex items-center gap-2 text-neutral-400 text-sm mb-3">
                       <Calendar className="w-4 h-4" />
                       <span>{project.date}</span>
                     </div>
                   </div>
-                  <p className="text-neutral-400 text-base leading-relaxed">{project.description}</p>
+                  <p className="text-neutral-400 text-base leading-relaxed">
+                    {project.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -177,7 +220,10 @@ export default function Projects() {
         {activeTab === "photography" && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {photographyProjects.map((project) => (
-              <Card key={project.id} className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0">
+              <Card
+                key={project.id}
+                className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0"
+              >
                 <Carousel className="w-full">
                   <CarouselContent>
                     {project.images.map((image, index) => (
@@ -198,13 +244,17 @@ export default function Projects() {
                 </Carousel>
                 <CardContent className="p-6 py-0">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2 font-acme">
+                      {project.title}
+                    </h3>
                     <div className="flex items-center gap-2 text-neutral-400 text-sm mb-3">
                       <Calendar className="w-4 h-4" />
                       <span>{project.date}</span>
                     </div>
                   </div>
-                  <p className="text-neutral-400 text-base leading-relaxed">{project.description}</p>
+                  <p className="text-neutral-400 text-base leading-relaxed">
+                    {project.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -212,5 +262,5 @@ export default function Projects() {
         )}
       </div>
     </section>
-  )
+  );
 }
