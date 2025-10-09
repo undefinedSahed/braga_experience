@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -136,36 +137,60 @@ export default function ContactForm() {
                   London, UK & Europe
                 </p>
                 <p className="pt-3 text-lg font-semibold">Social Links</p>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 group">
                   <a
                     target="_blank"
                     href="https://www.youtube.com/@lucasbraga1230"
                   >
-                    <Youtube
-                      size={25}
-                      className="bg-gray-500 p-0.5 rounded-xs"
-                    />
-                  </a>
-                  <a target="_blank" href="https://www.instagram.com/bragaexp">
-                    <Instagram
-                      size={25}
-                      className="bg-gray-500 p-0.5 rounded-xs"
+                    <Image
+                      src="/youtube.png"
+                      width={30}
+                      height={30}
+                      alt="youtube icon"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
                     />
                   </a>
                   <a
                     target="_blank"
-                    href="https://www.linkedin.com/in/lucas-braga-50970a35a/"
+                    href="https://www.youtube.com/@lucasbraga1230"
                   >
-                    <Linkedin
-                      size={25}
-                      className="bg-gray-500 p-0.5 rounded-xs"
+                    <Image
+                      src="/instagram.png"
+                      width={25}
+                      height={25}
+                      alt="instagram icon"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/@lucasbraga1230"
+                  >
+                    <Image
+                      src="/linkedin.png"
+                      width={25}
+                      height={25}
+                      alt="linkedin icon"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
                     />
                   </a>
                   <a target="_blank" href="tel:+44 07514-996775">
-                    <Phone size={25} className="bg-gray-500 p-0.5 rounded-xs" />
+                    <Image
+                      src="/phone-call.png"
+                      width={25}
+                      height={25}
+                      alt="phone icon"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                    />
                   </a>
                   <a target="_blank" href="mailto:contact@bragaexperience.com">
-                    <Mail size={25} className="bg-gray-500 p-0.5 rounded-xs" />
+                    <Image
+                      src="/mail.png"
+                      width={25}
+                      height={25}
+                      alt="mail icon"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                    />
                   </a>
                 </div>
               </div>
