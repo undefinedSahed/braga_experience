@@ -74,12 +74,12 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-neutral-950">
+    <section id="contact" className="py-20 bg-white/10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5">
           {/* Left side - Info with background */}
           <div
-            className="relative rounded-l-2xl overflow-hidden px-4 md:py-32 py-10 md:px-8 flex flex-col justify-center col-span-2"
+            className="relative rounded-l-2xl overflow-hidden px-4 md:py-12 py-10 md:px-8 flex flex-col justify-center col-span-2 order-2 lg:order-1"
             style={{
               backgroundImage: `url(/contact-left.png)`,
               backgroundSize: "cover",
@@ -92,18 +92,16 @@ export default function ContactForm() {
                 Content Tailored to You and Your Business.
               </h2>
               <p className="text-neutral-300 mb-6 leading-relaxed">
-                From impactful commercials to dynamic social media campaigns, we
-                specialize in crafting high-quality visuals that resonate with
-                your audience. Whether you're based in London, elsewhere in the
-                UK, or across Europe, our team is equipped to bring your vision
-                to life.
+                Serving London, the UK, and Europe, we deliver creative
+                videography and photography services designed to capture your
+                vision and make your brand stand out.
               </p>
               <p className="text-neutral-300 mb-6 leading-relaxed">
-                Supporting Statistics: <br />
-                Did you know? 84% of video marketers say video has helped
-                increase sales. 83% of consumers were convinced to buy a product
-                or service by watching a brand&apos;s video. Users typically
-                spend 88% more time on websites that feature video content.
+                Did You Know? <br /> 84% of video marketers say video has
+                directly helped increase sales. <br /> 83% of consumers are
+                convinced to buy a product or service after watching a brand’s
+                video. <br /> Users spend 88% more time on websites that feature
+                video content.
               </p>
               <div className="space-y-3 text-white">
                 <a
@@ -113,13 +111,16 @@ export default function ContactForm() {
                   <span className="font-semibold">
                     <Mail size={18} />
                   </span>{" "}
-                  contact@bragaexperience.com
+                  sales@bragaexperience.com
                 </a>
-                <a href="tel:+447123456789" className="flex items-center gap-2">
+                <a
+                  href="tel:+44 07514-996775"
+                  className="flex items-center gap-2"
+                >
                   <span className="font-semibold">
                     <Phone size={18} />
                   </span>{" "}
-                  +44 7123 456789
+                  +44 07514-996775
                 </a>
                 <p className="flex items-center gap-2">
                   <span className="font-semibold">
@@ -154,6 +155,12 @@ export default function ContactForm() {
                       className="bg-gray-500 p-0.5 rounded-xs"
                     />
                   </a>
+                  <a target="_blank" href="tel:+44 07514-996775">
+                    <Phone size={25} className="bg-gray-500 p-0.5 rounded-xs" />
+                  </a>
+                  <a target="_blank" href="mailto:contact@bragaexperience.com">
+                    <Mail size={25} className="bg-gray-500 p-0.5 rounded-xs" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -161,18 +168,18 @@ export default function ContactForm() {
 
           {/* Right side - Form with background */}
           <div
-            className="relative rounded-r-2xl overflow-hidden px-4 md:py-32 py-10 md:px-8 col-span-3"
-            style={{
-              backgroundImage: `url(/contact-right.png)`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            className="relative rounded-r-2xl overflow-hidden px-4 md:py-12 py-10 md:px-8 col-span-3 order-1 lg:order-2 bg-orange-600"
+            // style={{
+            //   backgroundImage: `url(/contact-right.png)`,
+            //   backgroundSize: "cover",
+            //   backgroundPosition: "center",
+            // }}
           >
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-white mb-6 font-acme">
+              <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 font-acme">
                 Get a Quote Within 2 Hours
               </h3>
-              <p className="text-neutral-300 mb-8">
+              <p className="text-neutral-200 mb-8">
                 Fast turnaround, tailored pricing for your project!
               </p>
 

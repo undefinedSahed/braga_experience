@@ -36,7 +36,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-20 bg-neutral-900">
+    <section id="services" className="pb-12 lg:pb-20 bg-[#1F1F1F]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-acme">
@@ -53,7 +53,7 @@ export default function Services() {
               key={service.id}
               className="bg-neutral-950 border-neutral-800 overflow-hidden group cursor-pointer p-0"
             >
-              <div className="relative group aspect-[5/5] overflow-hidden">
+              <div className="relative group lg:aspect-square aspect-[5/3] overflow-hidden">
                 <Image
                   src={service.image || "/placeholder.svg"}
                   alt={service.title}

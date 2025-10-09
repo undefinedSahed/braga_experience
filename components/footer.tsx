@@ -1,5 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
+import { Mail } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -7,17 +8,39 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="relative w-48 h-12">
-            <Image src="/braga-experience-logo-white.jpg" alt="Braga Experience" fill className="object-contain" />
+            <Image
+              src="/logo.png"
+              alt="Braga Experience"
+              fill
+              className="object-contain"
+            />
           </div>
 
+          <div className=""></div>
+
           <div className="flex gap-6">
-            <Link href="#" className="text-neutral-400 hover:text-white transition-colors">
+            <Link
+              href="mailto:contact@bragaexperience.com"
+              className="flex items-center gap-2 text-neutral-400"
+            >
+              Email
+            </Link>
+            <Link
+              href="#"
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
               Instagram
             </Link>
-            <Link href="#" className="text-neutral-400 hover:text-white transition-colors">
+            <Link
+              href="#"
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
               LinkedIn
             </Link>
-            <Link href="#" className="text-neutral-400 hover:text-white transition-colors">
+            <Link
+              href="#"
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
               YouTube
             </Link>
           </div>
@@ -28,5 +51,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
