@@ -144,7 +144,7 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState<Tab>("filmmaking");
 
   return (
-    <section id="projects" className="lg:py-28 bg-[#1F1F1F]">
+    <section id="projects" className="lg:py-28 py-5 bg-[#1F1F1F]">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="mb-12">
