@@ -23,6 +23,8 @@ import {
   Youtube,
 } from "lucide-react";
 
+import { motion } from "framer-motion";
+
 export default function ContactForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,7 +80,11 @@ export default function ContactForm() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-5">
           {/* Left side - Info with background */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="relative rounded-b-xl lg:rounded-b-none lg:rounded-l-2xl overflow-hidden px-4 md:py-12 py-10 md:px-8 flex flex-col justify-center col-span-2 order-2 lg:order-1"
             style={{
               backgroundImage: `url(/contact-left.png)`,
@@ -164,10 +170,14 @@ export default function ContactForm() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right side - Form with background */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="relative rounded-t-xl lg:rounded-t-none lg:rounded-r-2xl overflow-hidden px-4 md:py-12 py-10 md:px-8 col-span-3 order-1 lg:order-2 bg-orange-600"
             // style={{
             //   backgroundImage: `url(/contact-right.png)`,
@@ -258,7 +268,7 @@ export default function ContactForm() {
                 <b className="text-white"> Privacy Policy</b>.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

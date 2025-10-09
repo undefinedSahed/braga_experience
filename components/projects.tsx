@@ -157,7 +157,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1 }}
           className="flex lg:flex-row flex-col justify-between items-center"
         >
           <div className="lg:mb-12 mb-6 text-center lg:text-start">
@@ -216,7 +216,7 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1, delay: 0.6 }}
           >
             <Carousel
               opts={{
