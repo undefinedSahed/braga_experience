@@ -266,8 +266,8 @@ export default function Projects() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-2 md:-left-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
-              <CarouselNext className="right-2 md:-right-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
+              <CarouselPrevious className="left-2 md:-mt-5 lg:mt-0 md:left-3 lg:-left-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
+              <CarouselNext className="right-2 md:-mt-5 lg:mt-0 md:right-3 lg:-right-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
             </Carousel>
           </motion.div>
         )}
@@ -337,8 +337,8 @@ export default function Projects() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-2 md:-left-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
-              <CarouselNext className="right-2 md:-right-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
+              <CarouselPrevious className="left-2 lg:-left-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
+              <CarouselNext className="right-2 lg:-right-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
             </Carousel>
           </motion.div>
         )}

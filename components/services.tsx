@@ -81,7 +81,7 @@ export default function Services() {
           {services.map((service) => (
             <div key={service.id} className="perspective-1000">
               <motion.div
-                className="relative w-full lg:aspect-square aspect-[5/3]"
+                className="relative w-full aspect-square"
                 style={{ transformStyle: "preserve-3d" }}
                 animate={{
                   rotateY: flippedCards.includes(service.id) ? 180 : 0,
