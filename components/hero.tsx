@@ -55,11 +55,20 @@ export default function Hero() {
             <Button
               onClick={() => scrollToSection("contact")}
               size="lg"
-              className="bg-transparent lg:bg-white !border-1 border-white text-white lg:text-black hover:bg-white hover:text-neutral-950"
+              className="hidden lg:block bg-transparent lg:bg-white !border-1 border-white text-white lg:text-black hover:bg-white hover:text-neutral-950"
             >
               Get a Quote
             </Button>
           </div>
+        </div>
+        <div className="absolute lg:hidden bottom-8 left-1/2 -translate-x-1/2">
+          <Button
+            onClick={() => scrollToSection("contact")}
+            size="lg"
+            className="bg-transparent lg:bg-white !border-1 border-white text-white lg:text-black hover:bg-white hover:text-neutral-950"
+          >
+            Get a Quote
+          </Button>
         </div>
         <div className="hidden lg:block">
           <div className="absolute lg:pt-0 lg:right-5 right-1/2 translate-x-1/2 lg:translate-x-0 lg:top-1/2 -translate-y-1/2 flex items-center lg:items-start lg:flex-col mt-12 lg:mt-0 gap-x-2 lg:space-y-2">
