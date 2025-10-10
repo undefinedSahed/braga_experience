@@ -1,28 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import {
-  Instagram,
-  Linkedin,
-  Mail,
-  Youtube,
-  Volume2,
-  VolumeX,
-} from "lucide-react";
+import { Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
-  };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -38,7 +20,6 @@ export default function Hero() {
       {/* Video background */}
       <div className="">
         <video
-          ref={videoRef}
           autoPlay
           loop
           muted
@@ -51,14 +32,6 @@ export default function Hero() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* Mute/Unmute Button */}
-        <button
-          onClick={toggleMute}
-          className="absolute bottom-5 right-5 z-20 p-2 bg-black/40 rounded-full text-white hover:bg-black/60 transition cursor-pointer"
-        >
-          {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
-        </button>
-
         {/* Animated Content */}
         <motion.div
           className="relative z-10 text-center px-4"
@@ -70,11 +43,12 @@ export default function Hero() {
             Braga Experience
           </h1>
           <p className="text-lg md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto text-pretty">
-            We craft cinematic stories that connect brands and people. <br />
+            {/* We craft cinematic stories that connect brands and people. <br />
             <span className="hidden lg:block">
               From corporate films to creative content — we make visuals that
               move audiences.
-            </span>
+            </span> */}
+            London-Based Videography & Photography for the UK & Europe
           </p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"

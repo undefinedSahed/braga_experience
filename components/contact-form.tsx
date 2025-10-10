@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,21 +13,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import {
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Youtube,
-} from "lucide-react";
-
-import { motion } from "framer-motion";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function ContactForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -51,10 +43,6 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        toast({
-          title: "Message sent!",
-          description: "We'll get back to you as soon as possible.",
-        });
         setFormData({
           fullName: "",
           email: "",
@@ -62,6 +50,7 @@ export default function ContactForm() {
           serviceType: "",
           message: "",
         });
+        setShowPopup(true);
       } else {
         throw new Error("Failed to send message");
       }
@@ -77,10 +66,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white/10">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="lg:py-12 py-5 bg-white/10 relative">
+      <div className="container mx-auto px-2 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-5">
-          {/* Left side - Info with background */}
+          {/* Left side - Info */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -93,8 +82,8 @@ export default function ContactForm() {
               backgroundPosition: "center",
             }}
           >
-            <div className="relative z-10">
-              <h2 className="text-xl md:text-3xl font-medium md:pr-6 text-white mb-6 font-acme">
+            <div className="relative z-10 text-white">
+              <h2 className="text-xl md:text-3xl font-medium md:pr-6 mb-6 font-acme">
                 Our London Videography Services Deliver Creative and Engaging
                 Content Tailored to You and Your Business.
               </h2>
@@ -110,34 +99,24 @@ export default function ContactForm() {
                 video. <br /> Users spend 88% more time on websites that feature
                 video content.
               </p>
-              <div className="space-y-3 text-white">
+              <div className="space-y-3">
                 <a
-                  href="mailto:contact@bragaexperience.com"
+                  href="mailto:sales@bragaexperience.com"
                   className="flex items-center gap-2"
                 >
-                  <span className="font-semibold">
-                    <Mail size={18} />
-                  </span>{" "}
-                  sales@bragaexperience.com
+                  <Mail size={18} /> sales@bragaexperience.com
                 </a>
                 <a
-                  href="tel:+44 07514-996775"
+                  href="tel:+4407514996775"
                   className="flex items-center gap-2"
                 >
-                  <span className="font-semibold">
-                    <Phone size={18} />
-                  </span>{" "}
-                  +44 07514-996775
+                  <Phone size={18} /> +44 07514-996775
                 </a>
                 <p className="flex items-center gap-2">
-                  <span className="font-semibold">
-                    {" "}
-                    <MapPin size={18} />
-                  </span>{" "}
-                  London, UK & Europe
+                  <MapPin size={18} /> London, UK & Europe
                 </p>
                 <p className="pt-3 text-lg font-semibold">Social Links</p>
-                <div className="flex items-center space-x-2 group">
+                <div className="flex items-center space-x-3 group">
                   <a
                     target="_blank"
                     href="https://www.youtube.com/@lucasbraga1230"
@@ -146,49 +125,28 @@ export default function ContactForm() {
                       src="/youtube.png"
                       width={30}
                       height={30}
-                      alt="youtube icon"
+                      alt="youtube"
                       className="saturate-0 group-hover:saturate-100 transition-all duration-300"
                     />
                   </a>
-                  <a
-                    target="_blank"
-                    href="https://www.youtube.com/@lucasbraga1230"
-                  >
+                  <a target="_blank" href="https://www.instagram.com/bragaexp/">
                     <Image
                       src="/instagram.png"
                       width={25}
                       height={25}
-                      alt="instagram icon"
+                      alt="instagram"
                       className="saturate-0 group-hover:saturate-100 transition-all duration-300"
                     />
                   </a>
                   <a
                     target="_blank"
-                    href="https://www.youtube.com/@lucasbraga1230"
+                    href="https://www.linkedin.com/in/lucas-braga-50970a35a/"
                   >
                     <Image
                       src="/linkedin.png"
                       width={25}
                       height={25}
-                      alt="linkedin icon"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
-                    />
-                  </a>
-                  <a target="_blank" href="tel:+44 07514-996775">
-                    <Image
-                      src="/phone-call.png"
-                      width={25}
-                      height={25}
-                      alt="phone icon"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
-                    />
-                  </a>
-                  <a target="_blank" href="mailto:contact@bragaexperience.com">
-                    <Image
-                      src="/mail.png"
-                      width={25}
-                      height={25}
-                      alt="mail icon"
+                      alt="linkedin"
                       className="saturate-0 group-hover:saturate-100 transition-all duration-300"
                     />
                   </a>
@@ -197,18 +155,13 @@ export default function ContactForm() {
             </div>
           </motion.div>
 
-          {/* Right side - Form with background */}
+          {/* Right side - Form */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative rounded-t-xl lg:rounded-t-none lg:rounded-r-2xl overflow-hidden px-4 md:py-12 py-10 md:px-8 col-span-3 order-1 lg:order-2 bg-orange-600"
-            // style={{
-            //   backgroundImage: `url(/contact-right.png)`,
-            //   backgroundSize: "cover",
-            //   backgroundPosition: "center",
-            // }}
           >
             <div className="relative z-10">
               <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 font-acme">
@@ -258,7 +211,6 @@ export default function ContactForm() {
                   <SelectTrigger className="border-[#F8F9FA]/40 !h-12 !text-white w-full border-0 rounded-none bg-transparent p-0 border-b-[1px] placeholder:text-[#F8F9FA]">
                     <SelectValue placeholder="Type of Service" />
                   </SelectTrigger>
-
                   <SelectContent>
                     <SelectItem value="photography">Photography</SelectItem>
                     <SelectItem value="videography">Videography</SelectItem>
@@ -269,14 +221,14 @@ export default function ContactForm() {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-                <Input
+                <Textarea
                   placeholder="Write your message here..."
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
                   required
-                  className="border-0 rounded-none p-0 border-[#F8F9FA]/40 border-b-[1px] text-white placeholder:text-[#F8F9FA] !h-12"
+                  className="border-0 rounded-none border-[#F8F9FA]/40 border-b-[1px] text-white placeholder:text-[#F8F9FA] pl-0"
                 />
                 <Button
                   type="submit"
@@ -296,6 +248,100 @@ export default function ContactForm() {
           </motion.div>
         </div>
       </div>
+
+      {/* ✅ Popup confirmation card */}
+      <AnimatePresence>
+        {showPopup && (
+          <>
+            <motion.div
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowPopup(false)}
+            />
+            <motion.div
+              className="fixed inset-0 z-50 flex justify-center items-center px-4"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 40 }}
+            >
+              <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8 text-center">
+                <h2 className="text-2xl font-bold mb-3 text-gray-800">
+                  Thank you for getting in touch!
+                </h2>
+                <p className="text-gray-600 mb-4">
+                  We've received your message and will aim to respond within{" "}
+                  <b>2 working hours</b>.
+                </p>
+                <p className="text-gray-600 mb-6">
+                  If you'd like to speak with us directly in the meantime,
+                  please email{" "}
+                  <a
+                    href="mailto:sales@bragaexperience.com"
+                    className="text-orange-600 font-semibold underline"
+                  >
+                    sales@bragaexperience.com
+                  </a>{" "}
+                  or{" "}
+                  <a
+                    href="tel:+4407514996775"
+                    className="text-orange-600 font-semibold underline"
+                  >
+                    call us
+                  </a>
+                  .
+                </p>
+                <p className="text-gray-700 font-medium mb-4">
+                  Want to learn more about Braga Experience while you wait? Feel
+                  free to explore using the links below.
+                </p>
+                <div className="inline-flex items-center justify-center py-2 space-x-3 group">
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/@lucasbraga1230"
+                  >
+                    <Image
+                      src="/youtube.png"
+                      width={30}
+                      height={30}
+                      alt="youtube"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                    />
+                  </a>
+                  <a target="_blank" href="https://www.instagram.com/bragaexp/">
+                    <Image
+                      src="/instagram.png"
+                      width={25}
+                      height={25}
+                      alt="instagram"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                    />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/lucas-braga-50970a35a/"
+                  >
+                    <Image
+                      src="/linkedin.png"
+                      width={25}
+                      height={25}
+                      alt="linkedin"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                    />
+                  </a>
+                </div>
+                <Button
+                  onClick={() => setShowPopup(false)}
+                  className="bg-orange-600 text-white w-full hover:bg-orange-700"
+                >
+                  Close
+                </Button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

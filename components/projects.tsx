@@ -18,55 +18,55 @@ type Tab = "filmmaking" | "photography";
 const filmmakingProjects = [
   {
     id: 1,
-    title: "Project Name Here",
+    title: "London's Top Motorcycle Driving School",
     date: "20 January, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+      "Promotional video produced for one of London's leading motorcycle training schools, showcasing their passion for safe riding and professional training.",
     videoUrl:
       "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
   },
   {
     id: 2,
-    title: "Project Name Here",
+    title: "Lifestyle Influencer",
     date: "20 January, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+      "A series of engaging videos created for a lifestyle influencer, tailored for multiple social media platforms to enhance online presence and audience engagement.",
     videoUrl:
       "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
   },
   {
     id: 3,
-    title: "Project Name Here",
+    title: "Music Video",
     date: "20 January, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+      "A cinematic music video produced for an underground artist, capturing the raw energy and authenticity of their sound.",
     videoUrl:
       "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
   },
   {
     id: 4,
-    title: "Project Name Here",
+    title: "London High-End Catering Company",
     date: "20 January, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+      "A promotional film highlighting a luxury catering company, focusing on premium presentation, craftsmanship, and behind-the-scenes artistry.",
     videoUrl:
       "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
   },
   {
     id: 5,
-    title: "Project Name Here",
+    title: "Showreel - Brazil",
     date: "20 January, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+      "A dynamic showreel capturing cinematic moments and storytelling projects produced in Brazil.",
     videoUrl:
       "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
   },
   {
     id: 6,
-    title: "Project Name Here",
+    title: "Showreel - London",
     date: "20 January, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+      "A creative compilation of videography projects filmed across London, blending commercial, lifestyle, and cinematic visuals.",
     videoUrl:
       "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
   },
@@ -75,10 +75,10 @@ const filmmakingProjects = [
 const photographyProjects = [
   {
     id: 1,
-    title: "Photography Project Name",
+    title: "Secret Dining Experience",
     date: "15 February, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+      "An incredible opportunity to work with a Canadian company in partnership with Netflix, capturing the essence of an exclusive and immersive dining event.",
     images: [
       "/photography-project-image-1.jpg",
       "/photography-project-image-2.jpg",
@@ -87,10 +87,10 @@ const photographyProjects = [
   },
   {
     id: 2,
-    title: "Photography Project Name",
+    title: "Organic Pet Food",
     date: "15 February, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+      "A product-focused shoot designed to elevate the online presence of an organic pet food brand and highlight its commitment to natural ingredients and animal well-being.",
     images: [
       "/photography-project-image-4.jpg",
       "/photography-project-image-5.jpg",
@@ -99,10 +99,10 @@ const photographyProjects = [
   },
   {
     id: 3,
-    title: "Photography Project Name",
+    title: " Motorcycle Centre",
     date: "15 February, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+      "Collaborated with one of London's largest motorcycle training schools to produce strong visual assets that showcase their professionalism and dynamic environment.",
     images: [
       "/photography-project-image-7.jpg",
       "/photography-project-image-8.jpg",
@@ -110,21 +110,21 @@ const photographyProjects = [
   },
   {
     id: 4,
-    title: "Photography Project Name",
+    title: " Catering Company",
     date: "15 February, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+      "Created a premium visual portfolio for a high-end London catering company, emphasizing their exceptional presentation and culinary artistry.",
     images: [
-       "/photography-project-image-9.jpg",
+      "/photography-project-image-9.jpg",
       "/photography-project-image-10.jpg",
     ],
   },
   {
     id: 5,
-    title: "Photography Project Name",
+    title: "Beauty Clinic",
     date: "15 February, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+      "Delivered a complete photography package for a luxury beauty clinic in Hampstead, focusing on elegance, detail, and brand identity.",
     images: [
       "/photography-project-image-7.jpg",
       "/photography-project-image-8.jpg",
@@ -133,10 +133,10 @@ const photographyProjects = [
   },
   {
     id: 6,
-    title: "Photography Project Name",
+    title: "Engagement",
     date: "15 February, 2025",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
+      "Capturedatruly special moment as he proposed to his partner - a heartfelt story told through timeless and emotional imagery.",
     images: [
       "/photography-project-image-7.jpg",
       "/photography-project-image-8.jpg",
@@ -149,8 +149,8 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState<Tab>("filmmaking");
 
   return (
-    <section id="projects" className="lg:py-28 py-5 bg-[#1F1F1F]">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="lg:py-12 py-5 bg-[#1F1F1F]">
+      <div className="container mx-auto px-2 lg:px-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -221,7 +221,7 @@ export default function Projects() {
                 align: "start",
                 loop: false,
               }}
-              className="w-full"
+              className="w-full items-stretch"
             >
               <CarouselContent className="-ml-2 md:-ml-4">
                 {filmmakingProjects.map((project, index) => (
@@ -234,8 +234,9 @@ export default function Projects() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="h-full"
                     >
-                      <Card className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0">
+                      <Card className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0 flex flex-col h-full">
                         <div className="relative aspect-video">
                           <iframe
                             src={project.videoUrl}
@@ -245,12 +246,12 @@ export default function Projects() {
                             allowFullScreen
                           />
                         </div>
-                        <CardContent className="p-6 py-0">
-                          <div className="flex justify-between items-center">
-                            <h3 className="text-xl font-bold text-white mb-2 font-acme">
+                        <CardContent className="p-6 py-0 flex flex-col flex-grow">
+                          <div className="flex justify-between items-center mb-3">
+                            <h3 className="text-lg font-bold text-white font-acme">
                               {project.title}
                             </h3>
-                            <div className="flex items-center gap-2 text-neutral-400 text-sm mb-3">
+                            <div className="flex items-center gap-2 text-neutral-400 text-sm">
                               <Calendar className="w-4 h-4" />
                               <span>{project.date}</span>
                             </div>
@@ -264,6 +265,7 @@ export default function Projects() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
+
               <CarouselPrevious className="left-2 md:-mt-5 lg:mt-0 md:left-3 lg:-left-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
               <CarouselNext className="right-2 md:-mt-5 lg:mt-0 md:right-3 lg:-right-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
             </Carousel>
@@ -281,7 +283,7 @@ export default function Projects() {
                 align: "start",
                 loop: false,
               }}
-              className="w-full"
+              className="w-full items-stretch"
             >
               <CarouselContent className="-ml-2 md:-ml-4">
                 {photographyProjects.map((project, index) => (
@@ -294,38 +296,46 @@ export default function Projects() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="h-full"
                     >
-                      <Card className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0">
-                        <Carousel className="w-full">
-                          <CarouselContent>
-                            {project.images.map((image, imgIndex) => (
-                              <CarouselItem key={imgIndex}>
-                                <div className="relative aspect-video">
-                                  <Image
-                                    src={image || "/placeholder.svg"}
-                                    alt={`${project.title} - Image ${
-                                      imgIndex + 1
-                                    }`}
-                                    fill
-                                    className="object-cover"
-                                  />
-                                </div>
-                              </CarouselItem>
-                            ))}
-                          </CarouselContent>
-                          <CarouselPrevious className="left-2" />
-                          <CarouselNext className="right-2" />
-                        </Carousel>
-                        <CardContent className="p-6 py-0">
-                          <div className="flex justify-between items-center">
-                            <h3 className="text-xl font-bold text-white mb-2 font-acme">
+                      <Card className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0 flex flex-col h-full">
+                        {/* Inner Carousel for Images */}
+                        <div className="relative w-full">
+                          <Carousel className="w-full">
+                            <CarouselContent>
+                              {project.images.map((image, imgIndex) => (
+                                <CarouselItem key={imgIndex}>
+                                  <div className="relative aspect-video">
+                                    <Image
+                                      src={image || "/placeholder.svg"}
+                                      alt={`${project.title} - Image ${
+                                        imgIndex + 1
+                                      }`}
+                                      fill
+                                      className="object-cover"
+                                    />
+                                  </div>
+                                </CarouselItem>
+                              ))}
+                            </CarouselContent>
+                            <CarouselPrevious className="left-2" />
+                            <CarouselNext className="right-2" />
+                          </Carousel>
+                        </div>
+
+                        {/* Card Content */}
+                        <CardContent className="p-6 py-0 flex flex-col flex-grow">
+                          <div className="flex justify-between items-center mb-3">
+                            <h3 className="text-xl font-bold text-white font-acme">
                               {project.title}
                             </h3>
-                            <div className="flex items-center gap-2 text-neutral-400 text-sm mb-3">
+                            <div className="flex items-center gap-2 text-neutral-400 text-sm">
                               <Calendar className="w-4 h-4" />
                               <span>{project.date}</span>
                             </div>
                           </div>
+
+                          {/* Make description stick to bottom if shorter */}
                           <p className="text-neutral-400 text-base leading-relaxed">
                             {project.description}
                           </p>
@@ -335,6 +345,7 @@ export default function Projects() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
+
               <CarouselPrevious className="left-2 lg:-left-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
               <CarouselNext className="right-2 lg:-right-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
             </Carousel>

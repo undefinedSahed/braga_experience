@@ -54,14 +54,14 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-12 lg:pb-20 bg-[#1F1F1F]">
-      <div className="container mx-auto px-4">
+    <section id="services" className="lg:py-10 py-4 bg-[#1F1F1F]">
+      <div className="container mx-auto px-2 lg:px-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="text-center mb-12"
+          className="text-center lg:mb-12 mb-5"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-acme">
             Services
@@ -143,7 +143,7 @@ export default function Services() {
                           e.stopPropagation();
                           scrollToSection("contact");
                         }}
-                        className="w-full bg-white hover:bg-neutral-200 text-black font-semibold"
+                        className="w-full border-2 text-white !bg-transparent transition-all duration-300 hover:!bg-neutral-200 hover:text-black font-semibold"
                       >
                         Get a Quote
                       </Button>

@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF1A] backdrop-blur-2xl">
-        <div className="container mx-auto px-4 py-2 lg:py-6 flex items-center justify-between">
+        <div className="container mx-auto px-2 lg:px-0 py-2 lg:py-3 flex items-center justify-between">
           <Link href="/" className="relative lg:w-48 w-32 h-12">
             <Image
               src="/logo.png"

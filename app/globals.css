@@ -3,11 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
-.font-acme {
-  font-family: var(--font-acme);
-}
+
 [data-placeholder] {
   color: #f8f9fa;
+}
+/* globals.css or a component style */
+body {
+  font-family: "acme-gothic", sans-serif;
 }
 
 :root {
