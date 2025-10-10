@@ -106,7 +106,6 @@ const photographyProjects = [
     images: [
       "/photography-project-image-7.jpg",
       "/photography-project-image-8.jpg",
-      "/photography-project-image-9.jpg",
     ],
   },
   {
@@ -116,9 +115,8 @@ const photographyProjects = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie maximus elit et interdum. Donec vestibulum mollis dui et finibus.",
     images: [
-      "/photography-project-image-7.jpg",
-      "/photography-project-image-8.jpg",
-      "/photography-project-image-9.jpg",
+       "/photography-project-image-9.jpg",
+      "/photography-project-image-10.jpg",
     ],
   },
   {
