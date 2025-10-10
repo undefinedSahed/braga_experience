@@ -326,7 +326,7 @@ export default function Projects() {
                         {/* Card Content */}
                         <CardContent className="p-6 py-0 flex flex-col flex-grow">
                           <div className="flex justify-between items-center mb-3">
-                            <h3 className="text-xl font-bold text-white font-acme">
+                            <h3 className="text-lg font-bold text-white font-acme">
                               {project.title}
                             </h3>
                             <div className="flex items-center gap-2 text-neutral-400 text-sm">

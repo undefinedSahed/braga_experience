@@ -150,6 +150,24 @@ export default function ContactForm() {
                       className="saturate-0 group-hover:saturate-100 transition-all duration-300"
                     />
                   </a>
+                  <a target="_blank" href="tel:+44 07514-996775">
+                    <Image
+                      src="/phone-call.png"
+                      width={25}
+                      height={25}
+                      alt="phone icon"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                    />
+                  </a>
+                  <a target="_blank" href="mailto:contact@bragaexperience.com">
+                    <Image
+                      src="/mail.png"
+                      width={25}
+                      height={25}
+                      alt="mail icon"
+                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                    />
+                  </a>
                 </div>
               </div>
             </div>

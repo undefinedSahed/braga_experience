@@ -1,4 +1,3 @@
-import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,16 +6,14 @@ export default function Footer() {
     <footer className="bg-neutral-950 border-t border-neutral-800 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="relative w-48 h-12">
+          <Link href="/" className="relative w-48 h-12">
             <Image
               src="/logo.png"
               alt="Braga Experience"
               fill
               className="object-contain"
             />
-          </div>
-
-          <div className=""></div>
+          </Link>
 
           <div className="flex gap-6">
             <Link
@@ -26,19 +23,19 @@ export default function Footer() {
               Email
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/bragaexp/"
               className="text-neutral-400 hover:text-white transition-colors"
             >
               Instagram
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/lucas-braga-50970a35a/"
               className="text-neutral-400 hover:text-white transition-colors"
             >
               LinkedIn
             </Link>
             <Link
-              href="#"
+              href="https://www.youtube.com/@lucasbraga1230"
               className="text-neutral-400 hover:text-white transition-colors"
             >
               YouTube
