@@ -19,56 +19,51 @@ const filmmakingProjects = [
   {
     id: 1,
     title: "London's Top Motorcycle Driving School",
-    date: "20 January, 2025",
+    date: "August, 2025",
     description:
       "Promotional video produced for one of London's leading motorcycle training schools, showcasing their passion for safe riding and professional training.",
-    videoUrl:
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
+    videoUrl: "MzbJqS8-isc",
   },
+
   {
     id: 2,
     title: "Lifestyle Influencer",
-    date: "20 January, 2025",
+    date: "July, 2025",
     description:
       "A series of engaging videos created for a lifestyle influencer, tailored for multiple social media platforms to enhance online presence and audience engagement.",
-    videoUrl:
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
+    videoUrl: "HtpVUz0-Q5Q",
   },
   {
     id: 3,
     title: "Music Video",
-    date: "20 January, 2025",
+    date: "August, 2025",
     description:
       "A cinematic music video produced for an underground artist, capturing the raw energy and authenticity of their sound.",
-    videoUrl:
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
+    videoUrl: "jkZrLvg3UXM",
   },
   {
     id: 4,
     title: "London High-End Catering Company",
-    date: "20 January, 2025",
+    date: "June, 2025",
     description:
       "A promotional film highlighting a luxury catering company, focusing on premium presentation, craftsmanship, and behind-the-scenes artistry.",
-    videoUrl:
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
+    videoUrl: "0CmOGhD6XOk",
   },
   {
     id: 5,
     title: "Showreel - Brazil",
-    date: "20 January, 2025",
+    date: "September, 2025",
     description:
       "A dynamic showreel capturing cinematic moments and storytelling projects produced in Brazil.",
-    videoUrl:
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
+    videoUrl: "_kow2juGx_0",
   },
   {
     id: 6,
     title: "Showreel - London",
-    date: "20 January, 2025",
+    date: "May, 2025",
     description:
       "A creative compilation of videography projects filmed across London, blending commercial, lifestyle, and cinematic visuals.",
-    videoUrl:
-      "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1",
+    videoUrl: "0BX9p-cnDr0",
   },
 ];
 
@@ -76,72 +71,50 @@ const photographyProjects = [
   {
     id: 1,
     title: "Secret Dining Experience",
-    date: "15 February, 2025",
+    date: "June, 2025",
     description:
       "An incredible opportunity to work with a Canadian company in partnership with Netflix, capturing the essence of an exclusive and immersive dining event.",
-    images: [
-      "/photography-project-image-1.jpg",
-      "/photography-project-image-2.jpg",
-      "/photography-project-image-3.jpg",
-    ],
+    images: ["/p1i1.jpg", "/p1i2.jpg", "/photography.jpg"],
   },
   {
     id: 2,
     title: "Organic Pet Food",
-    date: "15 February, 2025",
+    date: "July, 2025",
     description:
       "A product-focused shoot designed to elevate the online presence of an organic pet food brand and highlight its commitment to natural ingredients and animal well-being.",
-    images: [
-      "/photography-project-image-4.jpg",
-      "/photography-project-image-5.jpg",
-      "/photography-project-image-6.jpg",
-    ],
+    images: ["/p2i1.jpg", "/p2i2.jpg"],
   },
   {
     id: 3,
-    title: " Motorcycle Centre",
-    date: "15 February, 2025",
+    title: "Motorcycle Centre",
+    date: "August, 2025",
     description:
       "Collaborated with one of London's largest motorcycle training schools to produce strong visual assets that showcase their professionalism and dynamic environment.",
-    images: [
-      "/photography-project-image-7.jpg",
-      "/photography-project-image-8.jpg",
-    ],
+    images: ["/p3i1.jpg", "/p3i2.jpg", "/p3i3.jpg"],
   },
   {
     id: 4,
-    title: " Catering Company",
-    date: "15 February, 2025",
+    title: "Catering Company",
+    date: "June, 2025",
     description:
       "Created a premium visual portfolio for a high-end London catering company, emphasizing their exceptional presentation and culinary artistry.",
-    images: [
-      "/photography-project-image-9.jpg",
-      "/photography-project-image-10.jpg",
-    ],
+    images: ["/p4i1.jpg", "/p4i2.jpg"],
   },
   {
     id: 5,
     title: "Beauty Clinic",
-    date: "15 February, 2025",
+    date: "June, 2025",
     description:
       "Delivered a complete photography package for a luxury beauty clinic in Hampstead, focusing on elegance, detail, and brand identity.",
-    images: [
-      "/photography-project-image-7.jpg",
-      "/photography-project-image-8.jpg",
-      "/photography-project-image-9.jpg",
-    ],
+    images: ["/p5i1.jpg", "/p5i2.jpg"],
   },
   {
     id: 6,
     title: "Engagement",
-    date: "15 February, 2025",
+    date: "July, 2025",
     description:
       "Capturedatruly special moment as he proposed to his partner - a heartfelt story told through timeless and emotional imagery.",
-    images: [
-      "/photography-project-image-7.jpg",
-      "/photography-project-image-8.jpg",
-      "/photography-project-image-9.jpg",
-    ],
+    images: ["/p6i1.jpg", "/p6i2.jpg"],
   },
 ];
 
@@ -239,7 +212,7 @@ export default function Projects() {
                       <Card className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0 flex flex-col h-full">
                         <div className="relative aspect-video">
                           <iframe
-                            src={project.videoUrl}
+                            src={`https://www.youtube.com/embed/${project.videoUrl}?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1`}
                             title={project.title}
                             className="w-full h-full"
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
