@@ -39,7 +39,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h1 className="hidden lg:block md:text-8xl font-bold text-white mb-8 text-balance font-acme">
+          <h1 className="hidden lg:block md:text-8xl font-bold text-white mb-8 text-balance ">
             Braga Experience
           </h1>
           <p className="text-lg md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto text-pretty">

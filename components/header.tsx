@@ -75,7 +75,7 @@ export default function Header() {
             <button
               key={item.label}
               onClick={() => scrollToSection(item.href)}
-              className="text-5xl md:text-7xl font-acme font-bold text-white/60 hover:text-white transition-colors py-4 text-left cursor-pointer"
+              className="text-5xl md:text-7xl  font-bold text-white/60 hover:text-white transition-colors py-4 text-left cursor-pointer"
             >
               {item.label}
             </button>

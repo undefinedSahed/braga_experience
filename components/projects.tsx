@@ -12,6 +12,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 type Tab = "filmmaking" | "photography";
 
@@ -157,7 +159,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl md:text-5xl font-bold text-white mb-4 font-acme"
+              className="text-4xl md:text-5xl font-bold text-white mb-4 "
             >
               Projects
             </motion.h2>
@@ -231,17 +233,18 @@ export default function Projects() {
                     >
                       <Card className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0 flex flex-col h-full">
                         <div className="relative aspect-video">
-                          <iframe
-                            src={`https://www.youtube.com/embed/${project.videoUrl}?rel=0&modestbranding=1&autoplay=0&controls=1&showinfo=0&iv_load_policy=3&fs=1&playsinline=1`}
-                            title={project.title}
-                            className="w-full h-full"
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          />
+                          <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
+                            <LiteYouTubeEmbed
+                              id={project.videoUrl}
+                              title={project.title}
+                              poster="maxresdefault"
+                              params="rel=0&modestbranding=1&showinfo=0"
+                            />
+                          </div>
                         </div>
                         <CardContent className="p-6 py-0 flex flex-col flex-grow">
                           <div className="flex justify-between items-center mb-3">
-                            <h3 className="text-lg font-bold text-white font-acme">
+                            <h3 className="text-lg font-bold text-white ">
                               {project.title}
                             </h3>
                             <div className="flex items-center gap-2 text-neutral-400 text-sm">
@@ -320,7 +323,7 @@ export default function Projects() {
                         {/* Card Content */}
                         <CardContent className="p-6 py-0 flex flex-col flex-grow">
                           <div className="flex justify-between items-center mb-3">
-                            <h3 className="text-lg font-bold text-white font-acme">
+                            <h3 className="text-lg font-bold text-white ">
                               {project.title}
                             </h3>
                             <div className="flex items-center gap-2 text-neutral-400 text-sm">

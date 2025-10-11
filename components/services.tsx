@@ -67,7 +67,7 @@ export default function Services() {
           transition={{ duration: 1 }}
           className="text-center lg:mb-12 mb-5"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-acme">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 ">
             Services
           </h2>
           <p className="text-neutral-400 text-lg">
@@ -118,7 +118,7 @@ export default function Services() {
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <CardContent className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-2xl font-bold text-white font-acme">
+                      <h3 className="text-2xl font-bold text-white ">
                         {service.title}
                       </h3>
                     </CardContent>
@@ -135,7 +135,7 @@ export default function Services() {
                 >
                   <CardContent className="flex flex-col justify-between h-full p-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-4 font-acme">
+                      <h3 className="text-2xl font-bold text-white mb-4 ">
                         {service.title}
                       </h3>
                       <p className="text-neutral-300 text-sm leading-relaxed">

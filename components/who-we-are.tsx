@@ -23,7 +23,7 @@ export default function WhoWeAre() {
 
           {/* Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl lg:mb-10 font-bold text-white text-center lg:text-start font-acme">
+            <h2 className="text-4xl md:text-5xl lg:mb-10 font-bold text-white text-center lg:text-start ">
               Who We Are
             </h2>
             <div className="relative block lg:hidden aspect-square rounded-2xl overflow-hidden">
@@ -66,7 +66,7 @@ export default function WhoWeAre() {
               experience built on professionalism, creativity, and trust.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
               <Button
                 onClick={() => {
                   const element = document.getElementById("contact");

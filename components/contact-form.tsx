@@ -83,7 +83,7 @@ export default function ContactForm() {
             }}
           >
             <div className="relative z-10 text-white">
-              <h2 className="text-xl md:text-3xl font-medium md:pr-6 mb-6 font-acme">
+              <h2 className="text-xl md:text-3xl font-medium md:pr-6 mb-6 ">
                 Our London Videography Services Deliver Creative and Engaging
                 Content Tailored to You and Your Business.
               </h2>
@@ -182,7 +182,7 @@ export default function ContactForm() {
             className="relative rounded-t-xl lg:rounded-t-none lg:rounded-r-2xl overflow-hidden px-4 md:py-12 py-10 md:px-8 col-span-3 order-1 lg:order-2 bg-orange-600"
           >
             <div className="relative z-10">
-              <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 font-acme">
+              <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 ">
                 Get a Quote Within 2 Hours
               </h3>
               <p className="text-neutral-200 mb-8">
