@@ -13,9 +13,10 @@ export default function WhoWeAre() {
           {/* Image */}
           <div className="relative hidden lg:block aspect-square rounded-2xl overflow-hidden">
             <Image
-              src="/whoweare.jpg"
+              src="https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760208975/whoweare_ziufph.jpg"
               alt="Braga Experience Team"
               fill
+              priority
               className="object-cover scale-75 lg:scale-100 rounded-md"
             />
           </div>
@@ -27,9 +28,10 @@ export default function WhoWeAre() {
             </h2>
             <div className="relative block lg:hidden aspect-square rounded-2xl overflow-hidden">
               <Image
-                src="/whoweare.jpg"
+                src="https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760208975/whoweare_ziufph.jpg"
                 alt="Braga Experience Team"
                 fill
+                priority
                 className="object-cover scale-75 lg:scale-100 rounded-md"
               />
             </div>
@@ -40,10 +42,18 @@ export default function WhoWeAre() {
               inspire.
             </p>
             <p className="text-neutral-300 mb-4 leading-relaxed text-center lg:text-start">
-              Founded by <Link target="_blank" href="https://www.linkedin.com/in/lucas-braga-50970a35a/" className="font-bold">Lucas Braga</Link>, a Brazilian creative with over five years
-              of experience producing high-quality visuals for leading brands
-              and businesses, we bring a unique blend of artistry and
-              professionalism to every project.
+              Founded by{" "}
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/in/lucas-braga-50970a35a/"
+                className="font-bold"
+              >
+                Lucas Braga
+              </Link>
+              , a Brazilian creative with over five years of experience
+              producing high-quality visuals for leading brands and businesses,
+              we bring a unique blend of artistry and professionalism to every
+              project.
             </p>
             <p className="text-neutral-300 mb-8 leading-relaxed text-center lg:text-start">
               We specialize in corporate videos, brand storytelling, product and

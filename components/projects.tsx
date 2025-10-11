@@ -74,7 +74,11 @@ const photographyProjects = [
     date: "June, 2025",
     description:
       "An incredible opportunity to work with a Canadian company in partnership with Netflix, capturing the essence of an exclusive and immersive dining event.",
-    images: ["/p1i1.jpg", "/p1i2.jpg", "/photography.jpg"],
+    images: [
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207834/p1i1_zqdxta.jpg",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207835/p1i2_ndid9m.jpg",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760208150/photography_ci1hyt.jpg",
+    ],
   },
   {
     id: 2,
@@ -82,7 +86,10 @@ const photographyProjects = [
     date: "July, 2025",
     description:
       "A product-focused shoot designed to elevate the online presence of an organic pet food brand and highlight its commitment to natural ingredients and animal well-being.",
-    images: ["/p2i1.jpg", "/p2i2.jpg"],
+    images: [
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207834/p2i1_ocif1n.jpg",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207836/p2i2_vj5efh.jpg",
+    ],
   },
   {
     id: 3,
@@ -90,7 +97,11 @@ const photographyProjects = [
     date: "August, 2025",
     description:
       "Collaborated with one of London's largest motorcycle training schools to produce strong visual assets that showcase their professionalism and dynamic environment.",
-    images: ["/p3i1.jpg", "/p3i2.jpg", "/p3i3.jpg"],
+    images: [
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207836/p3i1_hpiivr.jpg",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207837/p3i2_wt3yng.jpg",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207836/p3i3_vwne1h.jpg",
+    ],
   },
   {
     id: 4,
@@ -98,7 +109,10 @@ const photographyProjects = [
     date: "June, 2025",
     description:
       "Created a premium visual portfolio for a high-end London catering company, emphasizing their exceptional presentation and culinary artistry.",
-    images: ["/p4i1.jpg", "/p4i2.jpg"],
+    images: [
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207837/p4i1_jiuqya.jpg",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207839/p4i2_cjmyel.jpg",
+    ],
   },
   {
     id: 5,
@@ -106,7 +120,10 @@ const photographyProjects = [
     date: "June, 2025",
     description:
       "Delivered a complete photography package for a luxury beauty clinic in Hampstead, focusing on elegance, detail, and brand identity.",
-    images: ["/p5i1.jpg", "/p5i2.jpg"],
+    images: [
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207839/p5i1_gh8vzu.jpg",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207834/p5i2_fpaltg.jpg",
+    ],
   },
   {
     id: 6,
@@ -114,7 +131,10 @@ const photographyProjects = [
     date: "July, 2025",
     description:
       "Capturedatruly special moment as he proposed to his partner - a heartfelt story told through timeless and emotional imagery.",
-    images: ["/p6i1.jpg", "/p6i2.jpg"],
+    images: [
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207834/p6i1_pcoubd.jpg",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760207835/p6i2_q26k4h.jpg",
+    ],
   },
 ];
 
@@ -285,6 +305,7 @@ export default function Projects() {
                                         imgIndex + 1
                                       }`}
                                       fill
+                                      priority
                                       className="object-cover"
                                     />
                                   </div>

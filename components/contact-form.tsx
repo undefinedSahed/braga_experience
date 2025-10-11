@@ -77,7 +77,7 @@ export default function ContactForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative rounded-b-xl lg:rounded-b-none lg:rounded-l-2xl overflow-hidden px-4 md:py-12 py-10 md:px-8 flex flex-col justify-center col-span-2 order-2 lg:order-1"
             style={{
-              backgroundImage: `url(/contact-left.png)`,
+              backgroundImage: `url(https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760208974/contact-left_a6qgrl.png)`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
