@@ -219,47 +219,50 @@ export default function Projects() {
               className="w-full items-stretch"
             >
               <CarouselContent className="-ml-2 md:-ml-4">
-                {filmmakingProjects.map((project, index) => (
-                  <CarouselItem
-                    key={project.id}
-                    className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
-                  >
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="h-full"
+                {filmmakingProjects.map((project, index) => {
+                  return (
+                    <CarouselItem
+                      key={project.id}
+                      className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
                     >
-                      <Card className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0 flex flex-col h-full">
-                        <div className="relative aspect-video">
-                          <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
-                            <LiteYouTubeEmbed
-                              id={project.videoUrl}
-                              title={project.title}
-                              poster="maxresdefault"
-                              params="rel=0&modestbranding=1&showinfo=0"
-                            />
-                          </div>
-                        </div>
-                        <CardContent className="p-6 py-0 flex flex-col flex-grow">
-                          <div className="flex justify-between items-center mb-3">
-                            <h3 className="text-lg font-bold text-white ">
-                              {project.title}
-                            </h3>
-                            <div className="flex items-center gap-2 text-neutral-400 text-sm">
-                              <Calendar className="w-4 h-4" />
-                              <span>{project.date}</span>
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className="h-full"
+                      >
+                        <Card className="bg-neutral-900 border-neutral-800 overflow-hidden pt-0 flex flex-col h-full">
+                          <div className="relative aspect-video">
+                            <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg">
+                              <LiteYouTubeEmbed
+                                key={project.id} // forces re-render
+                                id={project.videoUrl}
+                                title={project.title}
+                                poster="maxresdefault"
+                                params="rel=0&modestbranding=1&showinfo=0"
+                              />
                             </div>
                           </div>
-                          <p className="text-neutral-400 text-base leading-relaxed">
-                            {project.description}
-                          </p>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
+                          <CardContent className="p-6 py-0 flex flex-col flex-grow">
+                            <div className="flex justify-between items-center mb-3">
+                              <h3 className="text-lg font-bold text-white ">
+                                {project.title}
+                              </h3>
+                              <div className="flex items-center gap-2 text-neutral-400 text-sm">
+                                <Calendar className="w-4 h-4" />
+                                <span>{project.date}</span>
+                              </div>
+                            </div>
+                            <p className="text-neutral-400 text-base leading-relaxed">
+                              {project.description}
+                            </p>
+                          </CardContent>
+                        </Card>
+                      </motion.div>
+                    </CarouselItem>
+                  );
+                })}
               </CarouselContent>
 
               <CarouselPrevious className="left-2 md:-mt-5 lg:mt-0 md:left-3 lg:-left-12 bg-neutral-800/90 hover:bg-neutral-700 border-neutral-700 text-white" />
