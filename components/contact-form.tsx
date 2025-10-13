@@ -300,7 +300,7 @@ export default function ContactForm() {
               exit={{ opacity: 0, y: 40 }}
             >
               <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8 text-center">
-                <h2 className="text-2xl font-bold mb-3 text-gray-800">
+                <h2 className="text-2xl font-bold mb-3 text-gray-800 title">
                   Thank you for getting in touch!
                 </h2>
                 <p className="text-gray-600 mb-4">
@@ -366,7 +366,7 @@ export default function ContactForm() {
                 </div>
                 <Button
                   onClick={() => setShowPopup(false)}
-                  className="bg-orange-600 text-white w-full hover:bg-orange-700"
+                  className="text-black w-full bg-[#C5F719] hover:bg-[#C5F719]/90"
                 >
                   Close
                 </Button>
