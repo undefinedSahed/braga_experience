@@ -83,7 +83,7 @@ export default function ContactForm() {
             }}
           >
             <div className="relative z-10 text-white">
-              <h2 className="text-xl md:text-3xl font-medium md:pr-6 mb-6 ">
+              <h2 className="text-xl md:text-3xl font-medium md:pr-6 mb-6 title text-[#C5F719]">
                 Our London Videography Services Deliver Creative and Engaging
                 Content Tailored to You and Your Business.
               </h2>
@@ -115,7 +115,9 @@ export default function ContactForm() {
                 <p className="flex items-center gap-2">
                   <MapPin size={18} /> London, UK & Europe
                 </p>
-                <p className="pt-3 text-lg font-semibold">Social Links</p>
+                <p className="pt-3 text-lg font-semibold text-[#C5F719] title">
+                  Social Links
+                </p>
                 <div className="flex items-center space-x-3 group">
                   <a
                     target="_blank"
@@ -140,7 +142,7 @@ export default function ContactForm() {
                   </a>
                   <a
                     target="_blank"
-                    href="https://www.linkedin.com/in/lucas-braga-50970a35a/"
+                    href="https://www.linkedin.com/company/braga-experience/"
                   >
                     <Image
                       src="/linkedin.png"
@@ -159,7 +161,7 @@ export default function ContactForm() {
                       className="saturate-0 group-hover:saturate-100 transition-all duration-300"
                     />
                   </a>
-                  <a target="_blank" href="mailto:contact@bragaexperience.com">
+                  <a target="_blank" href="mailto:sales@bragaexperience.com">
                     <Image
                       src="/mail.png"
                       width={25}
@@ -180,9 +182,14 @@ export default function ContactForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative rounded-t-xl lg:rounded-t-none lg:rounded-r-2xl overflow-hidden px-4 md:py-12 py-10 md:px-8 col-span-3 order-1 lg:order-2 bg-orange-600"
+            style={{
+              backgroundImage: `url(https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760208974/contact-right_x0hhhy.png)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
             <div className="relative z-10">
-              <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 ">
+              <h3 className="text-2xl md:text-4xl font-bold mb-6 title text-[#C5F719]">
                 Get a Quote Within 2 Hours
               </h3>
               <p className="text-neutral-200 mb-8">
@@ -251,16 +258,24 @@ export default function ContactForm() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#1F1F1F] text-white lg:mt-12 mt-6 h-12 hover:bg-neutral-200 hover:text-black"
+                  className="w-full text-black lg:mt-12 mt-6 h-12 hover:bg-[#C5F719]/90 hover:text-black bg-[#C5F719]"
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
               </form>
 
               <p className="text-sm text-white mt-4">
-                <span className="">* </span>Your personal details will be used
-                in accordance with our
-                <b className="text-white"> Privacy Policy</b>.
+                <span className="text-red-500">* </span>Your personal details
+                will be used in accordance with our
+                <a
+                  href="/Braga_Experience_Privacy_Notice.pdf"
+                  download
+                  className="text-white font-bold"
+                >
+                  {" "}
+                  Privacy Policy
+                </a>
+                .
               </p>
             </div>
           </motion.div>

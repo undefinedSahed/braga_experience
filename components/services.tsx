@@ -67,7 +67,7 @@ export default function Services() {
           transition={{ duration: 1 }}
           className="text-center lg:mb-12 mb-5"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 ">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 title">
             Services
           </h2>
           <p className="text-neutral-400 text-lg">
@@ -88,9 +88,9 @@ export default function Services() {
                 className="relative w-full aspect-square"
                 style={{ transformStyle: "preserve-3d" }}
                 animate={{
-                  rotateY: flippedCards.includes(service.id) ? 180 : 0,
+                  rotateY: flippedCards.includes(service.id) ? -180 : 0,
                 }}
-                transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+                transition={{ duration: 0.5, ease: "linear" }} // <-- use linear tween
               >
                 <Card
                   onClick={() => toggleFlip(service.id)}
@@ -99,7 +99,7 @@ export default function Services() {
                 >
                   <div className="relative group w-full h-full overflow-hidden">
                     <Image
-                      src={service.image || "/placeholder.svg"}
+                      src={service.image}
                       alt={service.title}
                       fill
                       priority
@@ -118,7 +118,7 @@ export default function Services() {
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <CardContent className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-2xl font-bold text-white ">
+                      <h3 className="text-2xl font-bold text-white title">
                         {service.title}
                       </h3>
                     </CardContent>
@@ -135,7 +135,7 @@ export default function Services() {
                 >
                   <CardContent className="flex flex-col justify-between h-full p-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-4 ">
+                      <h3 className="text-2xl font-bold text-white mb-4 title">
                         {service.title}
                       </h3>
                       <p className="text-neutral-300 text-sm leading-relaxed">

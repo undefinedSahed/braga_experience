@@ -1,19 +1,37 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const companies = [
-  { id: 1, image: "/l1.png" },
-  { id: 2, image: "/l2.png" },
-  { id: 3, image: "/l3.png" },
-  { id: 4, image: "/l4.png" },
-  { id: 5, image: "/l5.png" },
-  { id: 6, image: "/l6.png" },
+  { image: "/l1.png" },
+  { image: "/l2.png" },
+  { image: "/l3.png" },
+  { image: "/l4.png" },
+  { image: "/l5.png" },
+  { image: "/l6.png" },
 ];
 
 export default function Companies() {
+  const [key, setKey] = useState(0); // to force restart
+  const times = 10;
+
+  // Repeat the array
+  let repeated: typeof companies = [];
+  for (let i = 0; i < times; i++) {
+    repeated = repeated.concat(companies);
+  }
+
+  // Restart animation every 5 minutes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setKey((prev) => prev + 1); // trigger re-render/restart animation
+    }, 5 * 60 * 1000); // 5 minutes in milliseconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="projects"
@@ -26,34 +44,33 @@ export default function Companies() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl md:text-4xl font-semibold text-white lg:mb-16 mb-8 text-center capitalize"
+            className="text-2xl md:text-4xl font-semibold text-white lg:mb-16 mb-8 text-center capitalize title"
           >
-            We have provided our services to
+            Proudly Partnered with These Companies
           </motion.h2>
 
-          {/* Infinite scrolling logos */}
+          {/* Scrolling logos with restart key */}
           <div className="relative w-full overflow-hidden">
             <motion.div
+              key={key} // important: triggers restart
               className="flex items-center gap-12"
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 repeat: Infinity,
                 ease: "linear",
-                duration: 15,
+                duration: 5, // 5 minutes for one full scroll
               }}
             >
-              {[...Array(3)]
-                .flatMap(() => companies)
-                .map((company, index) => (
-                  <Image
-                    key={index}
-                    src={company.image}
-                    width={0}
-                    height={0}
-                    alt={`Company ${company.id}`}
-                    className="w-28 h-auto object-contain opacity-80 hover:opacity-100 transition"
-                  />
-                ))}
+              {repeated.map((company, index) => (
+                <Image
+                  key={index}
+                  src={company.image}
+                  width={0}
+                  height={0}
+                  alt={`Company`}
+                  className="w-28 h-auto object-contain opacity-80 hover:opacity-100 transition"
+                />
+              ))}
             </motion.div>
           </div>
         </div>

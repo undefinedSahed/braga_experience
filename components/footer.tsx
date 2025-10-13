@@ -17,7 +17,7 @@ export default function Footer() {
 
           <div className="flex gap-6">
             <Link
-              href="mailto:contact@bragaexperience.com"
+              href="mailto:sales@bragaexperience.com"
               className="flex items-center gap-2 text-neutral-400"
             >
               Email

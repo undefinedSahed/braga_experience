@@ -8,7 +8,7 @@
   color: #f8f9fa;
 }
 /* globals.css or a component style */
-body {
+.title {
   font-family: "acme-gothic", sans-serif;
 }
 

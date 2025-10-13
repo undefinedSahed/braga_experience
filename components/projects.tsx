@@ -159,7 +159,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl md:text-5xl font-bold text-white mb-4 "
+              className="text-4xl md:text-5xl font-bold text-white mb-4 title"
             >
               Projects
             </motion.h2>
@@ -184,7 +184,7 @@ export default function Projects() {
           >
             <button
               onClick={() => setActiveTab("filmmaking")}
-              className={`px-4 text-lg font-medium transition-all cursor-pointer ${
+              className={`px-4 text-lg font-medium transition-all cursor-pointer title ${
                 activeTab === "filmmaking"
                   ? "text-white relative after:absolute after:w-4/5 after:h-[1px] after:bg-white after:content-[''] after:bottom-0 after:left-1/2 after:-translate-x-1/2"
                   : "text-white/60"
@@ -194,7 +194,7 @@ export default function Projects() {
             </button>
             <button
               onClick={() => setActiveTab("photography")}
-              className={`px-4 text-lg font-medium transition-all cursor-pointer ${
+              className={`px-4 text-lg font-medium transition-all cursor-pointer title ${
                 activeTab === "photography"
                   ? "text-white relative after:absolute after:w-4/5 after:h-[1px] after:bg-white after:content-[''] after:bottom-0 after:left-1/2 after:-translate-x-1/2"
                   : "text-white/60"
@@ -246,7 +246,7 @@ export default function Projects() {
                           </div>
                           <CardContent className="p-6 py-0 flex flex-col flex-grow">
                             <div className="flex justify-between items-center mb-3">
-                              <h3 className="text-lg font-bold text-white ">
+                              <h3 className="text-lg font-bold text-white title">
                                 {project.title}
                               </h3>
                               <div className="flex items-center gap-2 text-neutral-400 text-sm">
@@ -326,7 +326,7 @@ export default function Projects() {
                         {/* Card Content */}
                         <CardContent className="p-6 py-0 flex flex-col flex-grow">
                           <div className="flex justify-between items-center mb-3">
-                            <h3 className="text-lg font-bold text-white ">
+                            <h3 className="text-lg font-bold text-white title">
                               {project.title}
                             </h3>
                             <div className="flex items-center gap-2 text-neutral-400 text-sm">

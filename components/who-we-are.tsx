@@ -23,7 +23,7 @@ export default function WhoWeAre() {
 
           {/* Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl lg:mb-10 font-bold text-white text-center lg:text-start ">
+            <h2 className="text-4xl md:text-5xl lg:mb-10 font-bold text-white text-center lg:text-start title">
               Who We Are
             </h2>
             <div className="relative block lg:hidden aspect-square rounded-2xl overflow-hidden">

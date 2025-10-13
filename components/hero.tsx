@@ -154,7 +154,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h1 className="text-lg lg:text-6xl font-semibold leading-snug text-white/90 mb-8 max-w-7xl mx-auto text-pretty">
+            <h1 className="title text-lg lg:text-6xl font-semibold leading-snug text-white/90 mb-8 max-w-7xl mx-auto text-pretty">
               London-Based Videography & Photography for the UK & Europe
             </h1>
             <motion.div
@@ -209,7 +209,7 @@ export default function Hero() {
       {videoLoaded && (
         <div className="hidden lg:block">
           <div className="absolute lg:pt-0 lg:right-5 right-1/2 translate-x-1/2 lg:translate-x-0 lg:top-1/2 -translate-y-1/2 flex items-center justify-center lg:items-start lg:flex-col mt-12 lg:mt-0 gap-x-2 lg:space-y-2 z-20">
-            <a target="_blank" href="mailto:contact@bragaexperience.com">
+            <a target="_blank" href="mailto:sales@bragaexperience.com">
               <Mail size={28} className="p-0.5 rounded-sm text-white/70" />
             </a>
             <a target="_blank" href="https://www.youtube.com/@lucasbraga1230">

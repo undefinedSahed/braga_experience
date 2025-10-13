@@ -70,7 +70,7 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="flex flex-col items-start justify-center h-[calc(100vh-120px)] container mx-auto px-4">
+        <nav className="flex flex-col items-start justify-center lg:h-[calc(100vh-120px)] container mx-auto px-4 pt-12 lg:pt-0">
           {menuItems.map((item) => (
             <button
               key={item.label}
