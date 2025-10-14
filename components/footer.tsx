@@ -23,18 +23,21 @@ export default function Footer() {
               Email
             </Link>
             <Link
+              target="_blank"
               href="https://www.instagram.com/bragaexp/"
               className="text-neutral-400 hover:text-white transition-colors"
             >
               Instagram
             </Link>
             <Link
+              target="_blank"
               href="https://www.linkedin.com/in/lucas-braga-50970a35a/"
               className="text-neutral-400 hover:text-white transition-colors"
             >
               LinkedIn
             </Link>
             <Link
+              target="_blank"
               href="https://www.youtube.com/@lucasbraga1230"
               className="text-neutral-400 hover:text-white transition-colors"
             >

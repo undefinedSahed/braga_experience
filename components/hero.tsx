@@ -21,43 +21,31 @@ export default function Hero() {
     const video = videoRef.current;
     if (!video) return;
 
-    const handleLoadStart = () => {
-      console.log("Video load started");
-      setShowFallback(true);
-    };
+    let fallbackTimer: NodeJS.Timeout;
 
     const handleCanPlay = () => {
       console.log("Video can play");
       setVideoLoaded(true);
       setShowFallback(false);
-    };
-
-    const handleCanPlayThrough = () => {
-      console.log("Video can play through");
-      setVideoLoaded(true);
-      setShowFallback(false);
-    };
-
-    const handleLoadedData = () => {
-      console.log("Video loaded data");
-      setVideoLoaded(true);
-      setShowFallback(false);
+      clearTimeout(fallbackTimer);
     };
 
     const handleError = (e: Event) => {
       console.error("Video error:", e);
       setVideoLoaded(false);
       setShowFallback(true);
+      clearTimeout(fallbackTimer);
     };
 
-    const handleStalled = () => {
-      console.log("Video stalled");
-      setShowFallback(true);
-    };
-
-    const handleWaiting = () => {
-      console.log("Video waiting");
-      setShowFallback(true);
+    const handleLoadStart = () => {
+      console.log("Video load started");
+      // Set fallback timer for 2 seconds
+      fallbackTimer = setTimeout(() => {
+        if (!videoLoaded) {
+          console.log("2-second fallback timer triggered");
+          setShowFallback(true);
+        }
+      }, 2000);
     };
 
     // Check if video is already loaded
@@ -66,39 +54,17 @@ export default function Hero() {
       setShowFallback(false);
     }
 
-    // Add event listeners
+    // Add event listeners - only the essential ones
     video.addEventListener("loadstart", handleLoadStart);
     video.addEventListener("canplay", handleCanPlay);
-    video.addEventListener("canplaythrough", handleCanPlayThrough);
-    video.addEventListener("loadeddata", handleLoadedData);
     video.addEventListener("error", handleError);
-    video.addEventListener("stalled", handleStalled);
-    video.addEventListener("waiting", handleWaiting);
-
-    // Force load the video
-    video.load();
 
     return () => {
       video.removeEventListener("loadstart", handleLoadStart);
       video.removeEventListener("canplay", handleCanPlay);
-      video.removeEventListener("canplaythrough", handleCanPlayThrough);
-      video.removeEventListener("loadeddata", handleLoadedData);
       video.removeEventListener("error", handleError);
-      video.removeEventListener("stalled", handleStalled);
-      video.removeEventListener("waiting", handleWaiting);
+      clearTimeout(fallbackTimer);
     };
-  }, []);
-
-  // Fallback timer - if video doesn't load within 3 seconds, show image permanently
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!videoLoaded) {
-        console.log("Fallback timer triggered");
-        setShowFallback(true);
-      }
-    }, 3000);
-
-    return () => clearTimeout(timer);
   }, [videoLoaded]);
 
   return (
@@ -108,53 +74,62 @@ export default function Hero() {
     >
       {/* Background container */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Fallback image */}
+        {/* Fallback image - preload optimized version */}
         {showFallback && (
           <div
             className="absolute inset-0 w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760378693/Logo_Apresentacao_one8iz.png')`,
+              backgroundImage: `url('https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,w_800/v1760378693/Logo_Apresentacao_one8iz.png')`,
             }}
           />
         )}
 
-        {/* Video - always in DOM but hidden when not loaded */}
+        {/* Cloudinary Video with optimized settings */}
         <video
           ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata" // Changed to metadata for faster initial load
           className={`absolute inset-0 w-full h-full object-cover ${
             videoLoaded ? "opacity-100" : "opacity-0"
           } transition-opacity duration-1000`}
+          poster="https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,w_400/v1760378693/Logo_Apresentacao_one8iz.png" // Low-quality poster for immediate display
         >
-          <source src="/videos/hero-test.mp4" type="video/mp4" />
+          {/* Cloudinary optimized video sources */}
+          <source
+            src="https://res.cloudinary.com/digtoiyka/video/upload/f_auto:video,q_auto:good,w_800/hero-test_ajpimd.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://res.cloudinary.com/digtoiyka/video/upload/f_auto:video,q_auto:good,w_800/hero-test_ajpimd.webm"
+            type="video/webm"
+          />
           {/* Fallback for browsers that don't support video */}
           <img
-            src="https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760378693/Logo_Apresentacao_one8iz.png"
+            src="https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,w_800/v1760378693/Logo_Apresentacao_one8iz.png"
             alt="Fallback background"
+            loading="eager"
           />
         </video>
 
-        {/* Overlay - only show when video is loaded */}
-        {videoLoaded && <div className="absolute inset-0 bg-black/40" />}
+        {/* Overlay - show when video is loaded OR when we're in fallback mode to ensure text readability */}
+        {(videoLoaded || showFallback) && (
+          <div className="absolute inset-0 bg-black/40" />
+        )}
       </div>
 
-      {/* Content - show based on loading state */}
-      <div
-        className={`relative z-10 text-center transition-opacity duration-500 ${
-          videoLoaded ? "opacity-100" : "opacity-0"
-        }`}
-      >
+      {/* Content - always show hero text and CTA, but with different styling based on state */}
+      <div className="relative z-10 text-center">
+        {/* When video is loaded - show animated content */}
         {videoLoaded ? (
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h1 className="title text-lg lg:text-6xl font-semibold leading-snug text-white/90 mb-8 max-w-7xl mx-auto text-pretty">
+            <h1 className="title text-lg md:text-2xl lg:text-6xl font-semibold leading-snug text-white/90 mb-8 max-w-7xl px-5 md:px-0 mx-auto text-pretty">
               London-Based Videography & Photography for the UK & Europe
             </h1>
             <motion.div
@@ -181,19 +156,34 @@ export default function Hero() {
             </motion.div>
           </motion.div>
         ) : (
-          // Loading state with just the image
-          <div className="w-full h-full flex items-center justify-center">
-            <img
-              src="https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760378693/Logo_Apresentacao_one8iz.png"
-              alt="Loading..."
-              className="max-w-full max-h-full object-contain"
-            />
+          // Fallback content - show hero text and CTA immediately with clean layout
+          <div className="w-full max-w-7xl px-5 md:px-0 mx-auto">
+            <h1 className="title text-lg md:text-2xl lg:text-6xl font-semibold leading-snug text-white/90 mb-8 text-pretty">
+              London-Based Videography & Photography for the UK & Europe
+            </h1>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={() => scrollToSection("projects")}
+                variant="outline"
+                size="lg"
+                className="hidden lg:block bg-transparent border-white text-white hover:bg-white hover:text-neutral-950"
+              >
+                View Projects
+              </Button>
+              <Button
+                onClick={() => scrollToSection("contact")}
+                size="lg"
+                className="hidden lg:block bg-transparent lg:bg-white !border-1 border-white text-white lg:text-black hover:bg-white hover:text-neutral-950"
+              >
+                Get a Quote
+              </Button>
+            </div>
           </div>
         )}
       </div>
 
-      {/* Mobile button - only show when video is loaded */}
-      {videoLoaded && (
+      {/* Mobile button - show when video is loaded OR in fallback mode */}
+      {(videoLoaded || showFallback) && (
         <div className="absolute lg:hidden bottom-8 left-1/2 -translate-x-1/2 z-20">
           <Button
             onClick={() => scrollToSection("contact")}
@@ -205,8 +195,8 @@ export default function Hero() {
         </div>
       )}
 
-      {/* Social icons - only show when video is loaded */}
-      {videoLoaded && (
+      {/* Social icons - show when video is loaded OR in fallback mode */}
+      {(videoLoaded || showFallback) && (
         <div className="hidden lg:block">
           <div className="absolute lg:pt-0 lg:right-5 right-1/2 translate-x-1/2 lg:translate-x-0 lg:top-1/2 -translate-y-1/2 flex items-center justify-center lg:items-start lg:flex-col mt-12 lg:mt-0 gap-x-2 lg:space-y-2 z-20">
             <a target="_blank" href="mailto:sales@bragaexperience.com">

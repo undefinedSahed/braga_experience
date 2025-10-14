@@ -11,7 +11,7 @@ const services = [
     id: 1,
     title: "Photography",
     image:
-      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760378701/IMG_1342_seyxyl.heic",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760208150/photography_ci1hyt.jpg",
     description:
       "We provide professional photography services for family events such as christenings, birthdays, and funerals, as well as corporate events and photos for your business. Our goal is to capture authentic moments and create lasting memories with high-quality, beautifully composed images tailored to your special occasion or brand.",
   },
@@ -19,7 +19,7 @@ const services = [
     id: 2,
     title: "Videography",
     image:
-      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760208974/videography_dd0fdy.png",
+      "https://res.cloudinary.com/digtoiyka/image/upload/f_auto,q_auto,dpr_auto,w_800/v1760378701/IMG_1342_seyxyl.heic",
     description:
       "We specialise in videography for companies, creating institutional videos, promotional content, social media videos, and coverage of corporate events. Our goal is to produce engaging, high-quality videos that enhance your brand presence and help drive more sales.",
   },

@@ -58,9 +58,9 @@ export default function Companies() {
               transition={{
                 repeat: Infinity,
                 ease: "linear",
-                duration: 10, // 5 minutes for one full scroll
+                duration: 15, // 5 minutes for one full scroll
               }}
-            >
+            >``
               {repeated.map((company, index) => (
                 <Image
                   key={index}

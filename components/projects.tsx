@@ -37,19 +37,19 @@ const filmmakingProjects = [
   },
   {
     id: 3,
-    title: "Music Video",
-    date: "August, 2025",
-    description:
-      "A cinematic music video produced for an underground artist, capturing the raw energy and authenticity of their sound.",
-    videoUrl: "jkZrLvg3UXM",
-  },
-  {
-    id: 4,
     title: "London High-End Catering Company",
     date: "June, 2025",
     description:
       "A promotional film highlighting a luxury catering company, focusing on premium presentation, craftsmanship, and behind-the-scenes artistry.",
     videoUrl: "0CmOGhD6XOk",
+  },
+  {
+    id: 4,
+    title: "Music Video",
+    date: "August, 2025",
+    description:
+      "A cinematic music video produced for an underground artist, capturing the raw energy and authenticity of their sound.",
+    videoUrl: "jkZrLvg3UXM",
   },
   {
     id: 5,
