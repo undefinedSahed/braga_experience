@@ -27,7 +27,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/yeg6fkb.css" />
       </head>
-      <body className={`font-sans ${poppins.className}`}>
+      <body className={`font-sans ${poppins.className} overflow-x-hidden`}>
         <Suspense fallback={null}>
           {children}
           <Toaster />

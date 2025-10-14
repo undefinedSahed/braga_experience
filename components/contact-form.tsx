@@ -66,7 +66,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="lg:py-12 py-5 bg-white/10 relative">
+    <section id="contact" className="lg:py-12 py-5 bg-white/10 relative overflow-x-hidden">
       <div className="container mx-auto px-2 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-5">
           {/* Left side - Info */}
