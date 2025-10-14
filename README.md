@@ -7,11 +7,11 @@ London-Based Videography & Photography for the UK & Europe. The website shows a 
     <br> 
 </p>
 
-## 🧐 About <a name = "about"></a>
+## About <a name = "about"></a>
 
 The main purpose of the project is to get the client through the website for the services of Braga Experience. While also displaying the work of the company.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
