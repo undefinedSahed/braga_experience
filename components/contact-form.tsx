@@ -190,7 +190,7 @@ export default function ContactForm() {
           >
             <div className="relative z-10">
               <h3 className="text-2xl md:text-4xl font-bold mb-6 title text-[#C5F719]">
-                Get a Quote Within 2 Hours
+                Get a Quote Within Minutes!
               </h3>
               <p className="text-neutral-200 mb-8">
                 Fast turnaround, tailored pricing for your project!
