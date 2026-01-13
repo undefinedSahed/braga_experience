@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { Poppins } from "next/font/google";
 import TrackingProviders from "@/providers/tracking-providers";
 import "./globals.css";
+import Whatsapp from "@/components/whatsapp";
 
 export const metadata: Metadata = {
   title: "Braga Experience - Professional Videography & Photography",
@@ -26,13 +27,15 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/yeg6fkb.css" />
-        <TrackingProviders />
       </head>
 
       <body className={`font-sans ${poppins.className} overflow-x-hidden`}>
+        {/* Moved inside body so scripts execute correctly */}
+        <TrackingProviders />
         <Suspense fallback={null}>
           {children}
           <Toaster />
+          <Whatsapp />
         </Suspense>
       </body>
     </html>

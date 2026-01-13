@@ -60,13 +60,17 @@ export default function ContactForm() {
         description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
+      console.error("Error sending message:", error);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section id="contact" className="lg:py-12 py-5 bg-white/10 relative overflow-x-hidden">
+    <section
+      id="contact"
+      className="lg:py-12 py-5 bg-white/10 relative overflow-x-hidden"
+    >
       <div className="container mx-auto px-2 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-5">
           {/* Left side - Info */}
@@ -118,17 +122,17 @@ export default function ContactForm() {
                 <p className="pt-3 text-lg font-semibold text-[#C5F719] title">
                   Social Links
                 </p>
-                <div className="flex items-center space-x-3 group">
+                <div className="inline-flex items-center space-x-3 group">
                   <a
                     target="_blank"
-                    href="https://www.youtube.com/@lucasbraga1230"
+                    href="https://www.youtube.com/@bragaexperience"
                   >
                     <Image
                       src="/youtube.png"
                       width={30}
                       height={30}
                       alt="youtube"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                      className=""
                     />
                   </a>
                   <a target="_blank" href="https://www.instagram.com/bragaexp/">
@@ -137,7 +141,7 @@ export default function ContactForm() {
                       width={25}
                       height={25}
                       alt="instagram"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                      className=""
                     />
                   </a>
                   <a
@@ -149,7 +153,7 @@ export default function ContactForm() {
                       width={25}
                       height={25}
                       alt="linkedin"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                      className=""
                     />
                   </a>
                   <a target="_blank" href="tel:+44 07514-996775">
@@ -158,7 +162,7 @@ export default function ContactForm() {
                       width={25}
                       height={25}
                       alt="phone icon"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                      className=""
                     />
                   </a>
                   <a target="_blank" href="mailto:sales@bragaexperience.com">
@@ -167,7 +171,7 @@ export default function ContactForm() {
                       width={25}
                       height={25}
                       alt="mail icon"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                      className=""
                     />
                   </a>
                 </div>
@@ -304,11 +308,11 @@ export default function ContactForm() {
                   Thank you for getting in touch!
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  We've received your message and will aim to respond within{" "}
+                  We&apos;ve received your message and will aim to respond within{" "}
                   <b>2 working hours</b>.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  If you'd like to speak with us directly in the meantime,
+                  If you&apos;d like to speak with us directly in the meantime,
                   please email{" "}
                   <a
                     href="mailto:sales@bragaexperience.com"
@@ -332,14 +336,14 @@ export default function ContactForm() {
                 <div className="inline-flex items-center justify-center py-2 space-x-3 group">
                   <a
                     target="_blank"
-                    href="https://www.youtube.com/@lucasbraga1230"
+                    href="https://www.youtube.com/@bragaexperience"
                   >
                     <Image
                       src="/youtube.png"
                       width={30}
                       height={30}
                       alt="youtube"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                      className=""
                     />
                   </a>
                   <a target="_blank" href="https://www.instagram.com/bragaexp/">
@@ -348,7 +352,7 @@ export default function ContactForm() {
                       width={25}
                       height={25}
                       alt="instagram"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                      className=""
                     />
                   </a>
                   <a
@@ -360,7 +364,7 @@ export default function ContactForm() {
                       width={25}
                       height={25}
                       alt="linkedin"
-                      className="saturate-0 group-hover:saturate-100 transition-all duration-300"
+                      className=""
                     />
                   </a>
                 </div>
